@@ -1,5 +1,5 @@
 <?php
-namespace Gil\KeyboardShortcuts\Block;
+namespace GilG\KeyboardShortcuts\Block;
 
 /**
  * KeyboardShortcuts Block
