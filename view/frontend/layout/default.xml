@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block ifconfig="web/keyboardshortcuts/enable_frontend" class="Gil\KeyboardShortcuts\Block\Shortcuts" name="keyboard.shortcuts.modal" template="Gil_KeyboardShortcuts::shortcuts.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

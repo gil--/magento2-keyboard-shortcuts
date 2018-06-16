@@ -1,0 +1,29 @@
+{
+    "name": "gil/keyboardshortcuts",
+    "description": "Magento 2 Storefront Keyboard Shortcuts",
+    "keywords": [
+        "magento2",
+        "magento",
+        "magento accessibility",
+        "magento hotkey"
+    ],
+    "license": "MIT",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Gil Greenberg",
+            "email": "gilgreenberg@gmail.com",
+            "homepage": "https://gilgreenberg.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/gil--/magento2-keyboard-shortcuts/issues",
+        "source": "https://github.com/gil--/magento2-keyboard-shortcuts"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    },
+    "version": "1.0.0"
+}

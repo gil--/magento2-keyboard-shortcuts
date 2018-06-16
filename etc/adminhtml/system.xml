@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="web">
+            <group id="keyboardshortcuts" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Keyboard Shortcuts (Hotkeys)</label>
+                <field id="enable_frontend" translate="label comment" type="select" sortOrder="0"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <comment>Enable/Disable keyboard shortcuts on frontend</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="hotkey_namespace" translate="label comment" type="text" sortOrder="10"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enter Namespace Hotkey</label>
+                    <comment>An `m` here means all hotkeys would begin with M. Such as M+I to open Minicart.</comment>
+                    <depends>
+                        <field id="enable_frontend">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_checkout_enable" translate="label" type="select" sortOrder="30"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Checkout Hotkey</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable_frontend">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_checkout" translate="label comment" type="text" sortOrder="40"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Go to Checkout</label>
+                    <comment>Prefixed by Namespace Hotkey</comment>
+                     <depends>
+                        <field id="enable_frontend">1</field>
+                        <field id="hotkey_checkout_enable">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_minicart_enable" translate="label" type="select" sortOrder="50"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Minicart Hotkey</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable_frontend">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_minicart" translate="label comment" type="text" sortOrder="60"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Open Minicart</label>
+                    <comment>Prefixed by Namespace Hotkey</comment>
+                     <depends>
+                        <field id="enable_frontend">1</field>
+                        <field id="hotkey_minicart_enable">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_account_enable" translate="label" type="select" sortOrder="70"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Account Hotkey</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable_frontend">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_account" translate="label comment" type="text" sortOrder="80"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Go to Account</label>
+                    <comment>Prefixed by Namespace Hotkey</comment>
+                     <depends>
+                        <field id="enable_frontend">1</field>
+                        <field id="hotkey_account_enable">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_search_enable" translate="label" type="select" sortOrder="90"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Search hotkey</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable_frontend">1</field>
+                    </depends>
+                </field>
+                <field id="hotkey_search" translate="label comment" type="text" sortOrder="100"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Focus cursor on search box</label>
+                    <comment>Prefixed by Namespace Hotkey</comment>
+                     <depends>
+                        <field id="enable_frontend">1</field>
+                        <field id="hotkey_search_enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

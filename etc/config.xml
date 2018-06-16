@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <web>
+            <keyboardshortcuts>
+                <enable_frontend>1</enable_frontend>
+                <hotkey_namespace>m</hotkey_namespace>
+                <hotkey_checkout_enable>1</hotkey_checkout_enable>
+                <hotkey_checkout>c</hotkey_checkout>
+                <hotkey_account_enable>1</hotkey_account_enable>
+                <hotkey_account>e</hotkey_account>
+                <hotkey_search_enable>1</hotkey_search_enable>
+                <hotkey_search>s</hotkey_search>
+                <hotkey_minicart_enable>1</hotkey_minicart_enable>
+                <hotkey_minicart>i</hotkey_minicart>
+            </keyboardshortcuts>
+        </web>
+    </default>
+</config>

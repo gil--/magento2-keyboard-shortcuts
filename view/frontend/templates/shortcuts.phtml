@@ -1,0 +1,98 @@
+<?php
+$namespace = $block->getConfig('web/keyboardshortcuts/hotkey_namespace')? $block->getConfig('web/keyboardshortcuts/hotkey_namespace') . '+' : '';
+$search_key = $namespace . $block->getConfig('web/keyboardshortcuts/hotkey_search');
+$search_enabled = $block->getConfig('web/keyboardshortcuts/hotkey_search_enable');
+$minicart_key = $namespace . $block->getConfig('web/keyboardshortcuts/hotkey_minicart');
+$minicart_enabled = $block->getConfig('web/keyboardshortcuts/hotkey_minicart_enable');
+$checkout_key = $namespace . $block->getConfig('web/keyboardshortcuts/hotkey_checkout');
+$checkout_enabled = $block->getConfig('web/keyboardshortcuts/hotkey_checkout_enable');
+$account_key = $namespace . $block->getConfig('web/keyboardshortcuts/hotkey_account');
+$account_enabled = $block->getConfig('web/keyboardshortcuts/hotkey_account_enable');
+?>
+<div id="keyboard-shortcuts-modal">
+    <h2><?= __('Site wide shortcuts') ?></h2>
+    <ul>
+        <li><kbd>?</kbd> <?= __('Show keyboard shortcuts') ?></li>
+        <?php if ($search_enabled): ?>
+            <li><kbd><?= $search_key ?></kbd> <?= __('Focus on search') ?></li>
+        <?php endif;?>
+        <?php if ($minicart_enabled): ?>
+            <li><kbd><?= $minicart_key ?></kbd> <?= __('Open minicart') ?></li>
+        <?php endif;?>
+        <?php if ($checkout_enabled): ?>
+            <li><kbd><?= $checkout_key ?></kbd> <?= __('Go to checkout') ?></li>
+        <?php endif;?>
+        <?php if ($account_enabled): ?>
+            <li><kbd><?= $account_key ?></kbd> <?= __('Go to account dashboard') ?></li>
+        <?php endif;?>
+    </ul>
+</div>
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal',
+            'mage/translate',
+            'hotkeys'
+        ],
+        function(
+            $,
+            modal,
+            $t
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: false,
+                title: $t('Keyboard Shortcuts'),
+            };
+
+            var modalId = '#keyboard-shortcuts-modal';
+            var popup = modal(options, $(modalId));
+
+            var hotkeysStr = 'shift+/'; // '?'
+
+            <?php if ($search_enabled): ?>
+                hotkeysStr += ',<?= $search_key ?>'
+            <?php endif; ?>
+
+            <?php if ($checkout_enabled): ?>
+                hotkeysStr += ',<?= $checkout_key ?>'
+            <?php endif; ?>
+
+            <?php if ($account_enabled): ?>
+                hotkeysStr += ',<?= $account_key ?>'
+            <?php endif; ?>
+
+            <?php if ($minicart_enabled): ?>
+                hotkeysStr += ',<?= $minicart_key ?>'
+            <?php endif; ?>
+
+            hotkeys(hotkeysStr, function(event, handler) {
+                event.preventDefault(); // prevent weirdness on some browsers
+
+                switch(handler.key) {
+                    case "shift+/":
+                        // '?' - show modal cheatsheet of keyboard shortcuts
+                        $(modalId).modal('openModal');
+                        break;
+                    case "<?= $namespace ?>s":
+                        // focus in searchbox
+                        $('#search').focus();
+                        break;
+                    case "<?= $namespace ?>i":
+                        $('.minicart-wrapper .action.showcart').click();
+                        break;
+                    case "<?= $namespace ?>c":
+                        // redirect to checkout
+                        window.location = '/checkout';
+                        break;
+                    case "<?= $namespace ?>e":
+                        // redirect to checkout
+                        window.location = '/customer/account';
+                        break;
+                }
+            });
+        }
+    );
+</script>
