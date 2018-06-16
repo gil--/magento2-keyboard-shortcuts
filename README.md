@@ -23,3 +23,13 @@ The namespace (the first key of a keyboard shortcut) is configurable with the de
 ## Support
 
 This module is provided as is. However, feel free to file a github issue or create a PR and I will try to respond when I can.
+
+## Preview
+
+### Frontend Modal
+
+![Frontend Modal Preview Screenshot](https://user-images.githubusercontent.com/3484527/41502655-28b0c866-718d-11e8-9b41-118c7a7d552d.png)
+
+### Admin Options
+
+![Admin Options Preview Screenshot](https://user-images.githubusercontent.com/3484527/41502671-66f0b744-718d-11e8-9d17-dfa4b4779956.png)
