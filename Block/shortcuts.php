@@ -3,7 +3,7 @@ namespace Gil\KeyboardShortcuts\Block;
 
 /**
  * KeyboardShortcuts Block
- * @package  Gil_KeyboardShortcuts
+ * @package  GilG_KeyboardShortcuts
  * @module   KeyboardShortcuts
  * @author   Gil Greenberg
  */
