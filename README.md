@@ -2,6 +2,10 @@
 
 This module enables hotkeys for a store's main functionality.
 
+## Install
+
+`composer require gilg/keyboardshortcuts`
+
 ## Purpose
 
 The purpose of these hotkeys is to **increase accessibility** to those with limited mobility and to **speed up developer workflow** by allowing for quick keyboard navigation.
