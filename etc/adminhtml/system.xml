@@ -63,7 +63,7 @@
                     </depends>
                 </field>
                 <field id="hotkey_search_enable" translate="label" type="select" sortOrder="90"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Search hotkey</label>
+                    <label>Enable Search Hotkey</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
                         <field id="enable_frontend">1</field>
