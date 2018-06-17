@@ -1,3 +1,6 @@
+[![Total Downloads](https://poser.pugx.org/gilg/keyboardshortcuts/downloads)](https://packagist.org/packages/gilg/keyboardshortcuts)
+[![Latest Stable Version](https://poser.pugx.org/gilg/keyboardshortcuts/v/stable)](https://packagist.org/packages/gilg/keyboardshortcuts)
+
 # Magento 2 Storefront Keyboard Hotkeys
 
 This module enables hotkeys for a store's main functionality.
